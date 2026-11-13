@@ -1,97 +1,110 @@
-# 📱 Flutter & Dart Development Laboratory
+# 🧮 Flutter & Dart Laboratory — Calculator App & Lab Record
 
-Comprehensive laboratory portfolio covering fundamental to advanced mobile and cross-platform app development using **Flutter** and **Dart**.
+A complete mobile application development laboratory portfolio implemented through a feature-packed **Scientific Calculator & Currency Converter** application built with **Flutter and Dart**.
+
+---
+
+## 📱 Project Preview
+
+<p align="center">
+  <img src="screenshots/calculator_hero_preview.png" alt="Calculator App Preview - Standard, Scientific & History" width="850" />
+</p>
+
+<p align="center">
+  <b>Standard Mode (4×5 Grid)</b> &nbsp;•&nbsp; <b>Scientific Mode (Extended Functions)</b> &nbsp;•&nbsp; <b>Slide-In History Panel</b>
+</p>
 
 ---
 
 ## 📑 Table of Contents
 
-- [Experiment 1: Environment Setup & Language Fundamentals](#experiment-1-environment-setup--language-fundamentals)
+- [Flutter Lab Experiment Mapping](#-flutter-lab-experiment-mapping)
+- [Experiment 1: Setup & Dart Basics](#experiment-1-setup--dart-language-fundamentals)
   - [1(a) Install Flutter and Dart SDK](#1a-install-flutter-and-dart-sdk)
   - [1(b) Dart Language Basics](#1b-write-a-simple-dart-program-to-understand-the-language-basics)
 - [Experiment 2: Widgets & Layout Architecture](#experiment-2-widgets--layout-architecture)
   - [2(a) Explore Core Flutter Widgets](#2a-explore-various-flutter-widgets-text-image-container-etc)
-  - [2(b) Layouts using Row, Column, and Stack](#2b-implement-different-layout-structures-using-row-column-and-stack-widgets)
+  - [2(b) Layout Structures with Row, Column, and Stack](#2b-implement-different-layout-structures-using-row-column-and-stack-widgets)
 - [Experiment 3: Responsive & Adaptive Design](#experiment-3-responsive--adaptive-design)
   - [3(a) Design a Responsive UI](#3a-design-a-responsive-ui-that-adapts-to-different-screen-sizes)
   - [3(b) Media Queries & Breakpoints](#3b-implement-media-queries-and-breakpoints-for-responsiveness)
 - [Experiment 4: Navigation & Routing](#experiment-4-navigation--routing)
-  - [4(a) Screen Navigation with Navigator](#4a-set-up-navigation-between-different-screens-using-navigator)
+  - [4(a) Screen Navigation using Navigator](#4a-set-up-navigation-between-different-screens-using-navigator)
   - [4(b) Navigation with Named Routes](#4b-implement-navigation-with-named-routes)
 - [Experiment 5: Widget State & State Management](#experiment-5-widget-state--state-management)
   - [5(a) Stateful vs Stateless Widgets](#5a-learn-about-stateful-and-stateless-widgets)
   - [5(b) State Management with setState & Provider](#5b-implement-state-management-using-setstate-and-provider)
 - [Experiment 6: Custom Components & UI Theming](#experiment-6-custom-components--ui-theming)
   - [6(a) Reusable Custom Widgets](#6a-create-custom-widgets-for-specific-ui-elements)
-  - [6(b) Theming & Custom Styling](#6b-apply-styling-using-themes-and-custom-styles)
+  - [6(b) Themes and Custom Styling](#6b-apply-styling-using-themes-and-custom-styles)
 - [Experiment 7: User Input & Form Validation](#experiment-7-user-input--form-validation)
-  - [7(a) Form with Various Input Fields](#7a-design-a-form-with-various-input-fields)
+  - [7(a) Form with Input Fields](#7a-design-a-form-with-various-input-fields)
   - [7(b) Form Validation & Error Handling](#7b-implement-form-validation-and-error-handling)
-- [Experiment 8: Animation & Motion Design](#experiment-8-animation--motion-design)
-  - [8(a) Flutter Animation Framework](#8a-add-animations-to-ui-elements-using-flutters-animation-framework)
-  - [8(b) Animation Transitions (Fade, Slide, Scale)](#8b-experiment-with-different-types-of-animations-fade-slide-etc)
-- [Experiment 9: REST API Integration & Data Presentation](#experiment-9-rest-api-integration--data-presentation)
+- [Experiment 8: Animation & Motion Framework](#experiment-8-animation--motion-framework)
+  - [8(a) UI Elements with Flutter Animation Framework](#8a-add-animations-to-ui-elements-using-flutters-animation-framework)
+  - [8(b) Experimenting with Animation Types (Scale, Fade, Slide)](#8b-experiment-with-different-types-of-animations-fade-slide-etc)
+- [Experiment 9: REST API Integration & Data Display](#experiment-9-rest-api-integration--data-display)
   - [9(a) Fetching Data from a REST API](#9a-fetch-data-from-a-rest-api)
-  - [9(b) UI Presentation with FutureBuilder](#9b-display-the-fetched-data-in-a-meaningful-way-in-the-ui)
-- [Featured Application: Scientific Calculator App](#-featured-application-calculator-app)
+  - [9(b) Displaying Fetched Data in the UI](#9b-display-the-fetched-data-in-a-meaningful-way-in-the-ui)
+- [Experiment 10: Testing & Debugging Tools](#experiment-10-testing--debugging-tools)
+  - [10(a) Unit Testing UI Components & Logic](#10a-write-unit-tests-for-ui-components)
+  - [10(b) Flutter DevTools & Widget Inspector](#10b-use-flutters-debugging-tools-to-identify-and-fix-issues)
+- [✨ Calculator Features & Modes](#-calculator-features--modes)
+- [🚀 Getting Started](#-getting-started)
 
 ---
 
-## Experiment 1: Environment Setup & Language Fundamentals
+## 🧪 Flutter Lab Experiment Mapping
+
+| Exp | Lab Objective | Implementation in Calculator Project | Screenshot Reference |
+|:---:|:---|:---|:---:|
+| **01** | Install SDK & Dart Basics | Environment verification & Dart calculation logic | [View Image](#📸-calculator-screenshot-1) |
+| **02** | Explore Widgets & Layouts | Display panel (`Container`), buttons (`Row`/`Column`), glow (`Stack`) | [View Image](#📸-calculator-screenshot-2) |
+| **03** | Responsive UI & Media Queries | Mobile ($360\times800$), Tablet ($768\times1024$), Landscape mode | [View Image](#📸-calculator-screenshot-3) |
+| **04** | Screen Navigation & Named Routes | Standard (`/`), Scientific (`/scientific`), History (`/history`) | [View Image](#📸-calculator-screenshot-4) |
+| **05** | Stateful Widgets & Provider State | Interactive display (`setState`), calculation history (`Provider`) | [View Image](#📸-calculator-screenshot-5) |
+| **06** | Custom Widgets & Dark Theming | `CalculatorButton`, `DisplayPanel`, `#0D0D1A` Indigo palette | [View Image](#📸-calculator-screenshot-6) |
+| **07** | Forms & Input Validation | Custom calculation form, syntax & divide-by-zero checks | [View Image](#📸-calculator-screenshot-7) |
+| **08** | Flutter Animations (Fade, Slide) | Button press scale, display fade, history panel slide-in | [View Image](#📸-calculator-screenshot-8) |
+| **09** | REST API & Async Data Display | Live exchange rate API fetching & Currency Converter UI | [View Image](#📸-calculator-screenshot-9) |
+| **10** | Unit Testing & Debugging Tools | `calculator_logic_test.dart` & Flutter DevTools Widget Inspector | [View Image](#📸-calculator-screenshot-10) |
+
+---
+
+## Experiment 1: Setup & Dart Language Fundamentals
 
 ### 1(a) Install Flutter and Dart SDK
-
 #### 🎯 Aim
-To install, configure, and verify the Flutter and Dart SDK development environment on the local operating system.
-
-#### 📝 Description
-Flutter is Google's open-source UI software development kit. Installing Flutter also installs the bundled Dart SDK. Environment variables (`PATH`) are configured, and `flutter doctor` is run to ensure Android toolchains, Chrome, and IDE plugins are operational.
+To install, configure, and verify the Flutter and Dart SDK environment on the operating system using command-line diagnostic tools.
 
 ```bash
-# Verify installation and dependencies
+# Verify installation and toolchains
 flutter doctor -v
 ```
 
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp1_a_flutter_install.svg" alt="1(a) Install Flutter and Dart SDK" width="720" />
-</p>
-
----
-
 ### 1(b) Write a simple Dart program to understand the language basics
-
 #### 🎯 Aim
-To understand fundamental Dart programming concepts: variables, data types, null safety, collections, and control flow.
+To implement fundamental arithmetic calculation logic using Dart variables, types, and functions.
 
-#### 📝 Code Example
 ```dart
 void main() {
-  // Variables & Data Types
-  String course = 'Flutter Mobile Development';
-  int labNumber = 1;
-  double version = 3.24;
-  bool isAwesome = true;
+  int a = 10;
+  int b = 5;
+  double add = (a + b).toDouble();
+  double sub = (a - b).toDouble();
+  double mul = (a * b).toDouble();
+  double div = a / b;
 
-  // Collections
-  List<String> topics = ['Widgets', 'Layouts', 'State', 'APIs'];
-  Map<String, dynamic> student = {'name': 'Student', 'id': 'FL101'};
-
-  print('Course: $course | Lab: $labNumber (v$version)');
-  print('Topics to cover: ${topics.join(", ")}');
-
-  // Control Flow & Functions
-  for (var topic in topics) {
-    describeTopic(topic);
-  }
+  print('Addition: $add');
+  print('Subtraction: $sub');
+  print('Multiplication: $mul');
+  print('Division: $div');
 }
-
-void describeTopic(String topic) => print('-> Mastering: $topic');
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 1
 <p align="center">
-  <img src="screenshots/exp1_b_dart_basics.svg" alt="1(b) Dart Language Basics" width="720" />
+  <img src="screenshots/exp01_dart_basics.png" alt="Experiment 1 - Dart Basics & SDK Installation" width="500" />
 </p>
 
 ---
@@ -99,100 +112,38 @@ void describeTopic(String topic) => print('-> Mastering: $topic');
 ## Experiment 2: Widgets & Layout Architecture
 
 ### 2(a) Explore various Flutter widgets (Text, Image, Container, etc.)
-
 #### 🎯 Aim
-To build UI layouts by exploring primitive Flutter widgets including `Text`, `Image`, `Container`, `Icon`, and `Card`.
-
-#### 📝 Code Example
-```dart
-Widget buildWidgetShowcase() {
-  return Card(
-    elevation: 4,
-    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-    child: Container(
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        color: Colors.blueGrey.shade50,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          const Icon(Icons.flutter_dash, size: 64, color: Colors.blue),
-          const SizedBox(height: 12),
-          const Text(
-            'Explore Flutter Widgets',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 8),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.network('https://flutter.dev/assets/images/shared/brand/flutter/logo/flutter-lockup.png', height: 48),
-          ),
-        ],
-      ),
-    ),
-  );
-}
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp2_a_flutter_widgets.svg" alt="2(a) Explore Flutter Widgets" width="720" />
-</p>
-
----
+To build a clean calculator user interface using essential Flutter primitives: `Text` for display outputs, `Container` with rounded borders for display panels, and `Icon` for action buttons.
 
 ### 2(b) Implement different layout structures using Row, Column, and Stack widgets
-
 #### 🎯 Aim
-To compose multi-child layouts using `Row` (horizontal alignment), `Column` (vertical sequencing), and `Stack` (overlapping layers).
+To structure the calculator layout using:
+- **`Column`**: Vertically sequences the top status bar, expression display panel, and keypad.
+- **`Row`**: Horizontally spaces arithmetic buttons across four columns.
+- **`Stack`**: Overlays glowing gradient backdrops behind active operator buttons and slide-in panels.
 
-#### 📝 Code Example
 ```dart
-Widget buildComplexLayout() {
+Widget buildCalculatorKeypad() {
   return Column(
     children: [
-      // Row Layout
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: const [
-          Chip(avatar: Icon(Icons.star), label: Text('Featured')),
-          Chip(avatar: Icon(Icons.flash_on), label: Text('Popular')),
-        ],
-      ),
-      const SizedBox(height: 16),
-      // Stack Layout (Overlapping Badges)
-      Stack(
-        clipBehavior: Clip.none,
         children: [
-          Container(
-            width: double.infinity,
-            height: 120,
-            decoration: BoxDecoration(
-              color: Colors.indigo,
-              borderRadius: BorderRadius.circular(12),
-            ),
-          ),
-          Positioned(
-            top: 10,
-            right: 10,
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              color: Colors.redAccent,
-              child: const Text('NEW', style: TextStyle(color: Colors.white)),
-            ),
-          ),
+          CalculatorButton(text: '7', onTap: () => append('7')),
+          CalculatorButton(text: '8', onTap: () => append('8')),
+          CalculatorButton(text: '9', onTap: () => append('9')),
+          CalculatorButton(text: '÷', isOperator: true, onTap: () => setOp('÷')),
         ],
       ),
+      // Additional Rows for keypad...
     ],
   );
 }
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 2
 <p align="center">
-  <img src="screenshots/exp2_b_layout_structures.svg" alt="2(b) Layouts using Row, Column, Stack" width="720" />
+  <img src="screenshots/exp02_widgets_layouts.png" alt="Experiment 2 - Flutter Widgets and Layouts" width="520" />
 </p>
 
 ---
@@ -200,81 +151,34 @@ Widget buildComplexLayout() {
 ## Experiment 3: Responsive & Adaptive Design
 
 ### 3(a) Design a responsive UI that adapts to different screen sizes
-
 #### 🎯 Aim
-To build UI components that flex dynamically based on constraints using `LayoutBuilder` and `Flexible`/`Expanded` widgets.
-
-#### 📝 Code Example
-```dart
-Widget buildResponsiveContainer() {
-  return LayoutBuilder(
-    builder: (context, constraints) {
-      if (constraints.maxWidth > 600) {
-        // Desktop / Tablet 2-column view
-        return Row(
-          children: const [
-            Expanded(child: Card(child: Center(child: Text('Left View')))),
-            Expanded(child: Card(child: Center(child: Text('Right View')))),
-          ],
-        );
-      } else {
-        // Mobile 1-column view
-        return Column(
-          children: const [
-            Card(child: Center(child: Text('Top View'))),
-            Card(child: Center(child: Text('Bottom View'))),
-          ],
-        );
-      }
-    },
-  );
-}
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp3_a_responsive_ui.svg" alt="3(a) Responsive UI Design" width="720" />
-</p>
-
----
+To implement an adaptive calculator layout that dynamically scales on compact phones, tablets, and wide screens.
 
 ### 3(b) Implement media queries and breakpoints for responsiveness
-
 #### 🎯 Aim
-To query screen dimensions, device orientation, and notch insets using `MediaQuery` and implement structured breakpoint thresholds.
+To query viewport dimensions using `MediaQuery.of(context)` and adjust keypad grids and aspect ratios across:
+- **Mobile Mode**: $360 \times 800$ portrait phone layout.
+- **Tablet Mode**: $768 \times 1024$ expanded screen layout.
+- **Landscape Mode**: Dual-column layout placing the scientific pad alongside standard controls.
 
-#### 📝 Code Example
 ```dart
-class ResponsiveBreakpoints extends StatelessWidget {
-  const ResponsiveBreakpoints({super.key});
+Widget build(BuildContext context) {
+  final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
+  final screenWidth = MediaQuery.of(context).size.width;
 
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    final isLandscape = MediaQuery.of(context).orientation == Orientation.landscape;
-
-    int crossAxisCount = 2;
-    if (size.width >= 1200) {
-      crossAxisCount = 4; // Desktop
-    } else if (size.width >= 800) {
-      crossAxisCount = 3; // Tablet
-    }
-
-    return GridView.builder(
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
-        childAspectRatio: isLandscape ? 1.5 : 1.0,
-      ),
-      itemCount: 8,
-      itemBuilder: (context, i) => Card(child: Center(child: Text('Item $i'))),
-    );
+  if (isLandscape) {
+    return buildLandscapeCalculator(); // 2-row / wide grid
+  } else if (screenWidth > 600) {
+    return buildTabletCalculator();    // Proportional tablet view
+  } else {
+    return buildMobileCalculator();    // Classic standard grid
   }
 }
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 3
 <p align="center">
-  <img src="screenshots/exp3_b_media_queries.svg" alt="3(b) Media Queries and Breakpoints" width="720" />
+  <img src="screenshots/exp03_responsive_ui.png" alt="Experiment 3 - Responsive UI and Breakpoints" width="520" />
 </p>
 
 ---
@@ -282,66 +186,31 @@ class ResponsiveBreakpoints extends StatelessWidget {
 ## Experiment 4: Navigation & Routing
 
 ### 4(a) Set up navigation between different screens using Navigator
-
 #### 🎯 Aim
-To transition between screens and manage the navigation history stack using `Navigator.push()` and `Navigator.pop()`.
-
-#### 📝 Code Example
-```dart
-// Navigating to Details Screen
-ElevatedButton(
-  onPressed: () {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const DetailScreen(title: 'Overview'),
-      ),
-    );
-  },
-  child: const Text('Go to Details Screen'),
-);
-
-// Returning from Details Screen
-IconButton(
-  icon: const Icon(Icons.arrow_back),
-  onPressed: () => Navigator.pop(context),
-);
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp4_a_navigator_screens.svg" alt="4(a) Navigation using Navigator" width="720" />
-</p>
-
----
+To enable seamless transitions between the **Standard Calculator**, **Scientific Calculator**, and **Calculation History** screens using `Navigator.push()` and `Navigator.pop()`.
 
 ### 4(b) Implement navigation with named routes
-
 #### 🎯 Aim
-To organize routes centrally in `MaterialApp` using named string paths (`/`, `/details`, `/settings`).
+To declare centralized route definitions in `MaterialApp` using named paths.
 
-#### 📝 Code Example
 ```dart
-void main() {
-  runApp(
-    MaterialApp(
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const HomeScreen(),
-        '/profile': (context) => const ProfileScreen(),
-        '/settings': (context) => const SettingsScreen(),
-      },
-    ),
-  );
-}
+// main.dart route configuration
+MaterialApp(
+  initialRoute: '/',
+  routes: {
+    '/': (context) => const CalculatorScreen(),
+    '/scientific': (context) => const ScientificScreen(),
+    '/history': (context) => const HistoryScreen(),
+  },
+);
 
-// Navigating via route name
-Navigator.pushNamed(context, '/profile');
+// Navigation action
+Navigator.pushNamed(context, '/scientific');
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 4
 <p align="center">
-  <img src="screenshots/exp4_b_named_routes.svg" alt="4(b) Navigation with Named Routes" width="720" />
+  <img src="screenshots/exp04_navigation_routes.png" alt="Experiment 4 - Navigation and Named Routes" width="520" />
 </p>
 
 ---
@@ -349,76 +218,36 @@ Navigator.pushNamed(context, '/profile');
 ## Experiment 5: Widget State & State Management
 
 ### 5(a) Learn about stateful and stateless widgets
-
 #### 🎯 Aim
-To understand the difference between immutable `StatelessWidget` and mutable `StatefulWidget` along with the `State` lifecycle (`initState`, `build`, `dispose`).
-
-#### 📝 Code Example
-```dart
-class CounterWidget extends StatefulWidget {
-  const CounterWidget({super.key});
-
-  @override
-  State<CounterWidget> createState() => _CounterWidgetState();
-}
-
-class _CounterWidgetState extends State<CounterWidget> {
-  int _counter = 0;
-
-  void _increment() => setState(() => _counter++);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text('Taps: $_counter', style: const TextStyle(fontSize: 24)),
-        ElevatedButton(onPressed: _increment, child: const Text('Increment')),
-      ],
-    );
-  }
-}
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp5_a_stateful_stateless.svg" alt="5(a) Stateful vs Stateless Widgets" width="720" />
-</p>
-
----
+To distinguish between immutable presenter widgets (`StatelessWidget` for reusable keys) and mutable state holders (`StatefulWidget` for dynamic expression entry).
 
 ### 5(b) Implement state management using setState and Provider
-
 #### 🎯 Aim
-To compare local ephemeral state (`setState`) with app-wide reactive state management using `ChangeNotifier` and `Provider`.
+- **Local State (`setState`)**: Updates current operand input, decimal formatting, and live calculation preview on every key tap.
+- **Global State (`Provider`)**: `HistoryProvider` extends `ChangeNotifier` to maintain past operations and broadcast updates to the slide-in history drawer.
 
-#### 📝 Code Example
 ```dart
-// 1. Model with ChangeNotifier
-class CounterModel extends ChangeNotifier {
-  int count = 0;
-  void increment() {
-    count++;
+// 1. Local State update
+setState(() {
+  _currentInput += value;
+  _result = _calculate();
+});
+
+// 2. Centralized Provider for calculation history
+class HistoryProvider with ChangeNotifier {
+  final List<String> _history = [];
+  List<String> get history => _history;
+
+  void addHistory(String entry) {
+    _history.add(entry);
     notifyListeners();
   }
 }
-
-// 2. Wrap App with ChangeNotifierProvider
-ChangeNotifierProvider(
-  create: (context) => CounterModel(),
-  child: const MyApp(),
-);
-
-// 3. Consume in Child Widgets
-Consumer<CounterModel>(
-  builder: (context, counter, child) {
-    return Text('Shared Count: ${counter.count}');
-  },
-);
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 5
 <p align="center">
-  <img src="screenshots/exp5_b_state_management.svg" alt="5(b) State Management with setState & Provider" width="720" />
+  <img src="screenshots/exp05_state_provider.png" alt="Experiment 5 - State Management with setState & Provider" width="500" />
 </p>
 
 ---
@@ -426,82 +255,34 @@ Consumer<CounterModel>(
 ## Experiment 6: Custom Components & UI Theming
 
 ### 6(a) Create custom widgets for specific UI elements
-
 #### 🎯 Aim
-To extract reusable UI patterns into clean, modular custom widgets accepting parameters and click callbacks.
-
-#### 📝 Code Example
-```dart
-class ActionCard extends StatelessWidget {
-  final String title;
-  final IconData icon;
-  final VoidCallback onTap;
-
-  const ActionCard({
-    super.key,
-    required this.title,
-    required this.icon,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onTap,
-      borderRadius: BorderRadius.circular(12),
-      child: Container(
-        padding: const EdgeInsets.all(16),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: Colors.grey.shade300),
-        ),
-        child: Row(
-          children: [
-            Icon(icon, color: Theme.of(context).primaryColor),
-            const SizedBox(width: 12),
-            Text(title, style: const TextStyle(fontWeight: FontWeight.w600)),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp6_a_custom_widgets.svg" alt="6(a) Custom Reusable Widgets" width="720" />
-</p>
-
----
+To create modular, custom components including `CalculatorButton` (with custom ripple & glow properties) and `DisplayPanel` (auto-fitting expression renderer).
 
 ### 6(b) Apply styling using themes and custom styles
-
 #### 🎯 Aim
-To define consistent design systems using `ThemeData`, custom typography, color schemes, and dark/light mode switching.
+To establish an application-wide dark design language using `ThemeData` with custom Poppins typography and a palette:
 
-#### 📝 Code Example
+| Element | Color Name | Hex Code |
+|---|---|---|
+| Background | Deep Navy | `#0D0D1A` |
+| Surface | Dark Blue | `#1A1A2E` |
+| Primary Accent | Vivid Indigo | `#6C63FF` |
+| Number Buttons | Dark Slate | `#1E1E30` |
+| Primary Text | Off-white | `#E8E8F0` |
+| Operator Glow | Coral Red | `#FF6B6B` |
+
 ```dart
-MaterialApp(
-  themeMode: ThemeMode.system,
-  theme: ThemeData(
-    brightness: Brightness.light,
-    colorSchemeSeed: Colors.indigo,
-    textTheme: const TextTheme(
-      headlineMedium: TextStyle(fontWeight: FontWeight.bold, color: Colors.indigo),
-    ),
-  ),
-  darkTheme: ThemeData(
-    brightness: Brightness.dark,
-    colorSchemeSeed: Colors.deepPurple,
-    scaffoldBackgroundColor: const Color(0xFF0F172A),
-  ),
+final ThemeData appTheme = ThemeData(
+  brightness: Brightness.dark,
+  primaryColor: const Color(0xFF6C63FF),
+  scaffoldBackgroundColor: const Color(0xFF0D0D1A),
+  fontFamily: 'Poppins',
 );
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 6
 <p align="center">
-  <img src="screenshots/exp6_b_themes_styling.svg" alt="6(b) Themes and Custom Styling" width="720" />
+  <img src="screenshots/exp06_custom_widgets_theme.png" alt="Experiment 6 - Custom Widgets and Theming" width="500" />
 </p>
 
 ---
@@ -509,300 +290,185 @@ MaterialApp(
 ## Experiment 7: User Input & Form Validation
 
 ### 7(a) Design a form with various input fields
-
 #### 🎯 Aim
-To design an interactive form with diverse input controls (`TextFormField`, `DropdownButtonFormField`, `Checkbox`, `Switch`, and `Radio`).
-
-#### 📝 Code Example
-```dart
-Widget buildRegistrationForm() {
-  return Form(
-    child: Column(
-      children: [
-        TextFormField(
-          decoration: const InputDecoration(labelText: 'Full Name', prefixIcon: Icon(Icons.person)),
-        ),
-        DropdownButtonFormField<String>(
-          items: ['Computer Science', 'Data Science', 'IT']
-              .map((d) => DropdownMenuItem(value: d, child: Text(d)))
-              .toList(),
-          onChanged: (val) {},
-          decoration: const InputDecoration(labelText: 'Department'),
-        ),
-        CheckboxListTile(
-          value: true,
-          title: const Text('Agree to Terms & Conditions'),
-          onChanged: (val) {},
-        ),
-      ],
-    ),
-  );
-}
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp7_a_form_input_fields.svg" alt="7(a) Form with Various Input Fields" width="720" />
-</p>
-
----
+To create a **Custom Calculation** screen featuring a stylized `TextFormField` where users can type complex nested expressions e.g. `25 × (10 + 5)`.
 
 ### 7(b) Implement form validation and error handling
-
 #### 🎯 Aim
-To enforce field constraints, email format checking, password strength validation, and provide immediate error hints using a `GlobalKey<FormState>`.
+To perform validation checks on user input before evaluation:
+- ❌ **Empty expression**: *"Please enter an expression"*
+- ❌ **Invalid syntax**: *"Invalid mathematical expression"*
+- ❌ **Division by zero**: *"Cannot divide by zero"*
 
-#### 📝 Code Example
 ```dart
-final _formKey = GlobalKey<FormState>();
-
-TextFormField(
-  validator: (value) {
-    if (value == null || value.trim().isEmpty) {
-      return 'Email address is required.';
-    }
-    final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
-    if (!emailRegex.hasMatch(value)) {
-      return 'Please enter a valid email address.';
-    }
-    return null; // Valid
-  },
-);
-
-// Triggering validation
-ElevatedButton(
-  onPressed: () {
-    if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Form Submitted Successfully!')),
-      );
-    }
-  },
-  child: const Text('Submit'),
-);
+String? validateExpression(String? value) {
+  if (value == null || value.trim().isEmpty) {
+    return 'Please enter an expression';
+  }
+  if (value.contains('/0')) {
+    return 'Cannot divide by zero';
+  }
+  return null;
+}
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 7
 <p align="center">
-  <img src="screenshots/exp7_b_form_validation.svg" alt="7(b) Form Validation & Error Handling" width="720" />
+  <img src="screenshots/exp07_form_validation.png" alt="Experiment 7 - Form Validation and Error Handling" width="480" />
 </p>
 
 ---
 
-## Experiment 8: Animation & Motion Design
+## Experiment 8: Animation & Motion Framework
 
 ### 8(a) Add animations to UI elements using Flutter's animation framework
-
 #### 🎯 Aim
-To create fluid explicit animations using `AnimationController`, `Tween`, and `CurvedAnimation`.
-
-#### 📝 Code Example
-```dart
-class AnimatedBox extends StatefulWidget {
-  const AnimatedBox({super.key});
-
-  @override
-  State<AnimatedBox> createState() => _AnimatedBoxState();
-}
-
-class _AnimatedBoxState extends State<AnimatedBox> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(duration: const Duration(seconds: 1), vsync: this)..repeat(reverse: true);
-    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeInOut);
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return ScaleTransition(
-      scale: _animation,
-      child: Container(width: 80, height: 80, color: Colors.blueAccent),
-    );
-  }
-}
-```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp8_a_ui_animations.svg" alt="8(a) Flutter Animation Framework" width="720" />
-</p>
-
----
+To enrich interactive feedback using Flutter's motion framework:
+- **Button Press Animation**: `ScaleTransition` shrinks button to $0.92\times$ on press.
+- **Display Change Animation**: `FadeTransition` fades evaluated results smoothly.
 
 ### 8(b) Experiment with different types of animations (fade, slide, etc.)
-
 #### 🎯 Aim
-To experiment with multiple transition types including `FadeTransition`, `SlideTransition`, and `RotationTransition`.
+To implement a sliding drawer transition for the **History Panel** using `SlideTransition` with `Curves.easeInOutCubic`.
 
-#### 📝 Code Example
 ```dart
-// Slide & Fade Composite Transition
-Widget buildCompositeAnimation(Animation<double> anim) {
-  return SlideTransition(
-    position: Tween<Offset>(
-      begin: const Offset(0.0, 0.5),
-      end: Offset.zero,
-    ).animate(anim),
-    child: FadeTransition(
-      opacity: anim,
-      child: const Card(
-        child: Padding(
-          padding: EdgeInsets.all(24),
-          child: Text('Smooth Slide & Fade Animation'),
-        ),
-      ),
-    ),
-  );
-}
+// Slide Animation for History Drawer
+SlideTransition(
+  position: Tween<Offset>(
+    begin: const Offset(1.0, 0.0), // Starts off-screen right
+    end: Offset.zero,              // Slides into view
+  ).animate(CurvedAnimation(parent: _drawerController, curve: Curves.easeInOut)),
+  child: const HistoryPanel(),
+);
 ```
 
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 8
 <p align="center">
-  <img src="screenshots/exp8_b_animation_types.svg" alt="8(b) Experiment with Animation Types" width="720" />
+  <img src="screenshots/exp08_animations.png" alt="Experiment 8 - Animations Scale, Fade, and Slide" width="500" />
 </p>
 
 ---
 
-## Experiment 9: REST API Integration & Data Presentation
+## Experiment 9: REST API Integration & Data Display
 
 ### 9(a) Fetch data from a REST API
-
 #### 🎯 Aim
-To perform asynchronous HTTP GET network calls, handle status codes, and deserialize raw JSON responses into strongly-typed Dart model classes.
+To integrate a live Currency Converter fetching foreign exchange rates from `https://api.exchangerate-api.com/v4/latest/USD` using the `http` package and JSON decoding.
 
-#### 📝 Code Example
 ```dart
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-
-class Post {
-  final int id;
-  final String title;
-
-  Post({required this.id, required this.title});
-
-  factory Post.fromJson(Map<String, dynamic> json) =>
-      Post(id: json['id'], title: json['title']);
-}
-
-Future<List<Post>> fetchPosts() async {
-  final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts'));
+// currency_api_service.dart
+Future<double> fetchExchangeRate(String from, String to) async {
+  final url = 'https://api.exchangerate-api.com/v4/latest/$from';
+  final response = await http.get(Uri.parse(url));
 
   if (response.statusCode == 200) {
-    List<dynamic> body = jsonDecode(response.body);
-    return body.take(10).map((dynamic item) => Post.fromJson(item)).toList();
-  } else {
-    throw Exception('Failed to load posts from REST API');
+    final data = jsonDecode(response.body);
+    return (data['rates'][to] as num).toDouble();
   }
+  throw Exception('Failed to load currency rate');
 }
 ```
-
-#### 📸 Output / Screenshot
-<p align="center">
-  <img src="screenshots/exp9_a_rest_api_fetch.svg" alt="9(a) Fetch Data from REST API" width="720" />
-</p>
-
----
 
 ### 9(b) Display the fetched data in a meaningful way in the UI
-
 #### 🎯 Aim
-To asynchronously render network data using `FutureBuilder` with graceful handling of loading spinners, error states, and responsive `ListView.separated`.
+To render live conversion cards showing converted sums (`₹ 8,500.00`) and live rate tags with loading spinners and error fallbacks.
 
-#### 📝 Code Example
-```dart
-Widget buildPostList() {
-  return FutureBuilder<List<Post>>(
-    future: fetchPosts(),
-    builder: (context, snapshot) {
-      if (snapshot.connectionState == ConnectionState.waiting) {
-        return const Center(child: CircularProgressIndicator());
-      } else if (snapshot.hasError) {
-        return Center(child: Text('Error: ${snapshot.error}'));
-      } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-        return const Center(child: Text('No data found'));
-      }
-
-      return ListView.separated(
-        itemCount: snapshot.data!.length,
-        separatorBuilder: (_, __) => const Divider(),
-        itemBuilder: (context, i) {
-          final post = snapshot.data![i];
-          return ListTile(
-            leading: CircleAvatar(child: Text('${post.id}')),
-            title: Text(post.title, maxLines: 1, overflow: TextOverflow.ellipsis),
-            trailing: const Icon(Icons.arrow_forward_ios, size: 14),
-          );
-        },
-      );
-    },
-  );
-}
-```
-
-#### 📸 Output / Screenshot
+#### 📸 Calculator Screenshot 9
 <p align="center">
-  <img src="screenshots/exp9_b_api_ui_display.svg" alt="9(b) Display Fetched Data in UI" width="720" />
+  <img src="screenshots/exp09_rest_api_currency.png" alt="Experiment 9 - REST API Currency Converter" width="550" />
 </p>
 
 ---
 
-## 🧮 Featured Application: Calculator App
+## Experiment 10: Testing & Debugging Tools
 
+### 10(a) Write unit tests for UI components
+#### 🎯 Aim
+To verify arithmetic operations through automated unit tests in `calculator_logic_test.dart` (Addition, Multiplication, Division).
+
+```dart
+test('Addition test', () {
+  expect(CalculatorLogic.add(10, 20), 30);
+});
+
+test('Multiplication test', () {
+  expect(CalculatorLogic.multiply(5, 4), 20);
+});
+
+test('Division test', () {
+  expect(CalculatorLogic.divide(20, 5), 4);
+});
+```
+
+### 10(b) Use Flutter's debugging tools to identify and fix issues
+#### 🎯 Aim
+To inspect widget trees, layout bounds, and repaint boundaries using **Flutter DevTools** and the **Flutter Inspector**.
+
+#### 📸 Calculator Screenshot 10
 <p align="center">
-  <img src="file_00000000b0188211bee946f18d9d48ef.png" alt="Calculator App Preview" width="720" />
+  <img src="screenshots/exp10_unit_testing.png" alt="Experiment 10 - Unit Testing and DevTools Inspector" width="550" />
 </p>
 
-Included in this repository is a complete **Scientific Calculator** demonstrating state management, responsive math grids, and smooth animations.
+---
 
-### Highlights
-- 🔢 **Standard Mode**: Arithmetic operations, percentages, signs, chain calculations.
-- 📐 **Scientific Mode**: Trigonometry (`sin`, `cos`, `tan`), logs (`log`, `ln`), powers & roots.
-- 📜 **History Slide-Out**: View past calculations instantly.
-- 🎨 **Deep Dark Theme**: Custom dark indigo color palette with glowing accents.
+## ✨ Calculator Features & Modes
+
+### 1. Standard Calculator
+- Operations: ➕ Addition, ➖ Subtraction, ✖️ Multiplication, ➗ Division.
+- Functions: `%` Percentage, `±` Sign Toggle, `⌫` Backspace, `AC` All Clear.
+- Auto-scaling display text with thousand separators.
+
+### 2. Scientific Calculator
+- **Trigonometry**: $\sin, \cos, \tan, \sin^{-1}, \cos^{-1}, \tan^{-1}$ (in DEG or RAD).
+- **Logarithms**: $\log_{10}(x)$, $\ln(x)$.
+- **Powers & Roots**: $x^2, x^3, e^x, 10^x, \sqrt{x}, \sqrt[3]{x}$.
+- **Constants**: $\pi$ (3.14159...), $e$ (2.71828...).
+- **Special Functions**: $x!$ (Factorial), $1/x$ (Reciprocal), $|x|$ (Absolute value).
+
+### 3. Calculation History
+- Stores up to 50 previous expressions and answers.
+- Re-use or copy results with one tap.
+- Slide-in overlay from right.
+
+### 4. Currency Converter
+- Live exchange rates fetched from REST API.
+- Instant conversion between USD, INR, EUR, GBP, and more.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) ($\ge 3.0.0$)
+- Dart SDK (bundled with Flutter)
+- VS Code or Android Studio
+
+### Installation & Run
 
 ```bash
-# Run the calculator application
-cd calculator_app
+# 1. Clone repository
+git clone https://github.com/jaswanthsam54/Flutter-Lab.git
+
+# 2. Enter project folder
+cd "Flutter-Lab/calculator_app"
+
+# 3. Fetch dependencies
 flutter pub get
+
+# 4. Run application
 flutter run
 ```
 
+### Run Tests & Verification
+
+```bash
+# Run unit tests
+flutter test
+
+# Run code analysis
+flutter analyze
+```
+
 ---
 
-## 📸 How to Replace Screenshot Placeholders
-
-Each experiment has a designated image path in the `screenshots/` directory:
-
-| Experiment | Target File | What to Capture |
-|:---|:---|:---|
-| **1(a)** | `screenshots/exp1_a_flutter_install.png` | Terminal output of `flutter doctor -v` |
-| **1(b)** | `screenshots/exp1_b_dart_basics.png` | Dart console output running language basics |
-| **2(a)** | `screenshots/exp2_a_flutter_widgets.png` | App screen displaying Text, Image & Container widgets |
-| **2(b)** | `screenshots/exp2_b_layout_structures.png` | Layout demonstration with Row, Column, and Stack |
-| **3(a)** | `screenshots/exp3_a_responsive_ui.png` | Adaptive UI running on different window sizes |
-| **3(b)** | `screenshots/exp3_b_media_queries.png` | Grid / card layout shifting with breakpoints |
-| **4(a)** | `screenshots/exp4_a_navigator_screens.png` | Screen transition using Navigator push/pop |
-| **4(b)** | `screenshots/exp4_b_named_routes.png` | Named route navigation flow |
-| **5(a)** | `screenshots/exp5_a_stateful_stateless.png` | Interactive counter widget updating state |
-| **5(b)** | `screenshots/exp5_b_state_management.png` | Provider state management across screens |
-| **6(a)** | `screenshots/exp6_a_custom_widgets.png` | Reusable custom widget components |
-| **6(b)** | `screenshots/exp6_b_themes_styling.png` | Light and Dark mode theme toggling |
-| **7(a)** | `screenshots/exp7_a_form_input_fields.png` | Interactive form with various input fields |
-| **7(b)** | `screenshots/exp7_b_form_validation.png` | Form validation error messages and success state |
-| **8(a)** | `screenshots/exp8_a_ui_animations.png` | Animation controller in action |
-| **8(b)** | `screenshots/exp8_b_animation_types.png` | Fade, Slide, or Scale animation sequence |
-| **9(a)** | `screenshots/exp9_a_rest_api_fetch.png` | HTTP GET call and console log / debug output |
-| **9(b)** | `screenshots/exp9_b_api_ui_display.png` | FutureBuilder loading and populating ListView |
-
-> **Tip:** You can directly save your captured screenshots as `.png` using the filenames above, or replace the `.svg` files in the `screenshots/` folder.
+*Built with ❤️ using Flutter & Dart*
