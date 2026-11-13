@@ -759,6 +759,10 @@ Widget buildPostList() {
 
 ## 🧮 Featured Application: Calculator App
 
+<p align="center">
+  <img src="file_00000000b0188211bee946f18d9d48ef.png" alt="Calculator App Preview" width="720" />
+</p>
+
 Included in this repository is a complete **Scientific Calculator** demonstrating state management, responsive math grids, and smooth animations.
 
 ### Highlights
